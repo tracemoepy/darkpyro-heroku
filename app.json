@@ -1,0 +1,30 @@
+{
+    "name": "DarkPyro-REV Userbot",
+    "description": "Just a Kanger Userbot",
+    "stack": "container",
+    "keywords": [
+        "telegram",
+        "userbot",
+        "pyrogram"
+    ],
+    "env": {
+        "SESSION": {
+            "description": "Pyrogram Session String",
+            "required": true
+        }
+    },
+    "addons": [
+        {
+            "plan": "heroku-postgresql",
+            "options": {
+                "version": "15"
+            }
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "eco"
+        }
+    }
+}
